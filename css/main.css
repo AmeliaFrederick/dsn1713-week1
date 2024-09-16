@@ -107,7 +107,8 @@ section {
   text-align: center;
   color: #fff;
   
-  /* flex */
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:nth-child(1) {
@@ -144,6 +145,7 @@ section {
   border-radius: 20px;
   font-size: 1.123rem;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .product-card button:hover,
@@ -159,3 +161,16 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 600px){
+  
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1080px){
+  
+  .product-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
